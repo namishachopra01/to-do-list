@@ -1,0 +1,157 @@
+/* Basic page layout */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 40px 16px;
+    font-family: Arial, sans-serif;
+    background: #f2f5ff;
+    color: #252a34;
+}
+
+.app {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 28px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(40, 55, 90, 0.10);
+}
+
+header {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0 0 8px;
+    color: #3549a5;
+}
+
+header p {
+    margin: 0;
+    color: #747b8b;
+}
+
+/* New-task input and button */
+#todo-form {
+    display: flex;
+    gap: 8px;
+}
+
+#todo-input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #d9deeb;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+#todo-input:focus {
+    outline: 2px solid #aebcff;
+    border-color: #586bd6;
+}
+
+button {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    background: #4d60c8;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #3549a5;
+}
+
+.task-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin: 22px 0 12px;
+    color: #747b8b;
+    font-size: 14px;
+}
+
+.text-button {
+    padding: 6px 0;
+    background: transparent;
+    color: #4d60c8;
+}
+
+.text-button:hover {
+    background: transparent;
+    color: #263a9a;
+    text-decoration: underline;
+}
+
+/* Task rows */
+#todo-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 0;
+    border-bottom: 1px solid #edf0f7;
+}
+
+.todo-item input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    accent-color: #4d60c8;
+    cursor: pointer;
+}
+
+.todo-text {
+    flex: 1;
+    overflow-wrap: anywhere;
+}
+
+.todo-item.completed .todo-text {
+    color: #9aa0ad;
+    text-decoration: line-through;
+}
+
+.delete-button {
+    padding: 6px 9px;
+    background: #fff0f0;
+    color: #bd3c3c;
+}
+
+.delete-button:hover {
+    background: #ffe0e0;
+}
+
+#empty-message {
+    padding: 20px 0 8px;
+    color: #8a91a0;
+    text-align: center;
+    font-size: 14px;
+}
+
+@media (max-width: 420px) {
+    .app {
+        padding: 20px;
+    }
+
+    #todo-form {
+        flex-direction: column;
+    }
+
+    #todo-form button {
+        width: 100%;
+    }
+}
