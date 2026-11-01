@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="todo-app">
+    <div class="header">
+      <p class="eyebrow">STAY FOCUSED</p>
+      <h1>My To-Do List</h1>
+      <p class="subtitle">Small steps, meaningful progress.</p>
+    </div>
+
+    <form id="taskForm" class="task-form">
+      <input id="taskInput" type="text" placeholder="What do you want to accomplish?" autocomplete="off">
+      <button type="submit">Add Task</button>
+    </form>
+
+    <div class="toolbar">
+      <span id="taskCount">0 tasks left</span>
+      <button id="clearCompleted" type="button">Clear completed</button>
+    </div>
+
+    <ul id="taskList" class="task-list"></ul>
+
+    <div id="emptyState" class="empty-state">
+      <div class="empty-icon">✓</div>
+      <h2>Your list is clear</h2>
+      <p>Add a task above and make today count.</p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
